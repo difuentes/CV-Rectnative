@@ -1,15 +1,38 @@
-import { StackScreenProps } from '@react-navigation/stack';
-import React from 'react'
-import { Text, View, Button, StyleSheet } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import React, { useEffect } from 'react'
+import { DrawerScreenProps, createDrawerNavigator } from '@react-navigation/drawer';
+//import { StackScreenProps } from '@react-navigation/stack';
+import { Text, View, Button, StyleSheet,TouchableOpacity, useWindowDimensions } from 'react-native';
 import { styles } from '../theme/appTheme';
 
-interface Props extends StackScreenProps<any,any>{
+/*Stacker Screen 
+    interface Props extends StackScreenProps<any,any>{
+        id: number;
+        nombre: string;
+    }
+*/
+//Drawer Screen
+interface Props extends DrawerScreenProps<any,any>{
     id: number;
     nombre: string;
 }
 
+
+
 export const PaginaOne = ({navigation}:Props) => {
+
+
+   
+
+    //Agregar Drawer a Pantalla
+    useEffect(()=>{
+
+        navigation.setOptions({
+            headerLeft:() => (<Button  title="Menu" onPress={()=>navigation.toggleDrawer()} /> )
+        })
+
+    },[])
+
+
     return (
        
             <View style={styles.globalMargin} >

@@ -21,8 +21,6 @@ interface Props extends DrawerScreenProps<any,any>{
 export const PaginaOne = ({navigation}:Props) => {
 
 
-   
-
     //Agregar Drawer a Pantalla
     useEffect(()=>{
 
@@ -53,6 +51,13 @@ export const PaginaOne = ({navigation}:Props) => {
                         onPress={()=> navigation.navigate('Persona',{id:2,habilidades:["ES6","React","React Native"]})}
                     >
                         <Text style={{color:'#fff',fontSize:15,fontWeight:'600'}}>Habilidades</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonPurple}
+                        onPress={()=> navigation.navigate('MisRedes',{id:2,habilidades:["ES6","React","React Native"]})}
+                    >
+                        <Text style={{color:'#fff',fontSize:15,fontWeight:'600'}}>RRSS</Text>
                     </TouchableOpacity>
                 </View>
                 

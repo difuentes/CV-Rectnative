@@ -9,18 +9,19 @@ export const  styles = StyleSheet.create({
         textAlign:"center",
         marginBottom:10,
         marginTop:5,
-        color:'#6f42c1',
+        color:'black',
         fontWeight:'bold'
     },
     buttonPurple:{
-        backgroundColor:'#6f42c1',
+        backgroundColor:'#ffd70a',
         width:100,
         height:100,
         color:'#fff',
         borderRadius:20,
         alignItems:'center',
         justifyContent:'center',
-        marginRight:10
+        marginRight:20,
+        marginTop:20
 
     },
     subtitle:{
@@ -28,10 +29,40 @@ export const  styles = StyleSheet.create({
         fontSize:20,
         textAlign:'center',
         color:'black',
-        marginBottom:10
+        marginBottom:10,
+        marginTop:10
     },
-    MenuLateral:{
+    avatar:{
+        width:180,
+        height:180,
+        borderRadius:100
+    },
+    avatarContainer:{
+        alignItems:'center',
+        marginTop:20
+    },
+    h1Menu:{
+        color:'#fff',
+        fontWeight:'bold',
+        fontSize:30,
+        marginTop:10  
+    },
+    containerMenu:{  
+       
+        marginHorizontal:65,
+        marginVertical:30
+    },
+    menuBoton:{
         
+    },
+    subtitleMenu:{
+        justifyContent:'center',
+        marginBottom:10,
+        marginTop:10,
+        color:'white',
+        fontWeight:'bold',
+        fontSize:15
     }
+    
 
 });

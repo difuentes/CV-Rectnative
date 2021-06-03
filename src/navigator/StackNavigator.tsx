@@ -5,8 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 //Paginas
 
-import { PaginaTwo } from '../screens/PaginaTwo';
-import { PaginaThree } from '../screens/PaginaThree';
+import { Educacion } from '../screens/Educacion';
+import { Experiencia } from '../screens/Experiencia';
 import { PaginaOne } from '../screens/PaginaOne';
 import { Persona } from '../screens/Persona';
 import Habilidades from '../screens/Habilidades';
@@ -33,7 +33,7 @@ export const  StackNavigator= ()=> {
           headerStyle:{
             elevation:0,
             shadowColor:'transparent',
-            backgroundColor:'#6f42c1',
+            backgroundColor:'#ffd70a',
             
           },
           cardStyle:{
@@ -42,8 +42,8 @@ export const  StackNavigator= ()=> {
         }}
       >
         <Stack.Screen name="PaginaOne" options={{title:"Curriculum vitae",headerTintColor:'white'}} component={PaginaOne} />
-        <Stack.Screen name="PaginaTwo" options={{title:"Two",headerTintColor:'white'}} component={PaginaTwo} />
-        <Stack.Screen name="PaginaThree" options={{title:"Three",headerTintColor:'white'}} component={PaginaThree} />
+        <Stack.Screen name="Experiencia" options={{title:"Two",headerTintColor:'white'}} component={Experiencia} />
+        <Stack.Screen name="Educacion" options={{title:"Three",headerTintColor:'white'}} component={Educacion} />
         <Stack.Screen name="Persona" options={{title:"DiFuentes",headerTintColor:'white'}} component={Persona} />
         <Stack.Screen name="Habilidades" options={{title:"Habilidades",headerTintColor:'white'}} component={Habilidades} />
       

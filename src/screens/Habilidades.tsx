@@ -14,17 +14,15 @@ export const Habilidades = ({ route, navigation }: Props) => {
      const params = route.params ; 
     
     useEffect(() => {
-        navigation.setOptions({
-            title: params.habilidades
-        })
+       
     }, [])
 
 
     return (
         <View style={styles.globalMargin}>
-            <Text style={styles.title}> {JSON.stringify(params, null, 3)} </Text>
+            <Text>Habilidades</Text>
+            <Text style={styles.title}>  </Text>
         </View>
-
 
     )
 }

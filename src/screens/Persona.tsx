@@ -28,6 +28,7 @@ export const Persona = ({ route, navigation }: Props) => {
 
     return (
         <View style={styles.globalMargin}>
+            <Text>Hobbie</Text>
             <Text style={styles.title}> {JSON.stringify(params, null, 3)} </Text>
         </View>
 

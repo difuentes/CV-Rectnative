@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 import {Button, Text,View} from 'react-native'
 import { styles } from '../theme/appTheme';
 
-export const PaginaTwo = () => {
+export const Educacion = () => {
 
     const navigator = useNavigation(); 
 
@@ -18,7 +18,7 @@ export const PaginaTwo = () => {
     return (
        
             <View  style={styles.globalMargin}>
-                <Text style={styles.title}>Pagina Two</Text>
+                <Text style={styles.title}>Educacion</Text>
                 <Button title="Three" onPress={()=>navigator.navigate('PaginaThree') }/>
             </View>
             
@@ -27,4 +27,4 @@ export const PaginaTwo = () => {
 }
 
 
-export default PaginaTwo;
+export default Educacion;

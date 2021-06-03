@@ -7,11 +7,11 @@ interface Props  extends StackScreenProps<any,any>{
     nombre: string;
 }
 
-export const PaginaThree= ({navigation}:Props) => {
+export const Experiencia= ({navigation}:Props) => {
     return (
        
             <View>
-                <Text style={styles.title} >Pagina Three</Text>
+                <Text style={styles.title}>Experiencia</Text>
                 <Button title="volver" onPress={()=> navigation.pop()}/>
                 <Button title="ir a home" onPress={()=> navigation.popToTop()}/>
             </View>
@@ -21,4 +21,4 @@ export const PaginaThree= ({navigation}:Props) => {
 }
 
 
-export default PaginaThree;
+export default Experiencia;

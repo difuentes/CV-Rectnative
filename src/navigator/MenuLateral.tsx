@@ -1,15 +1,25 @@
-import * as React from 'react';
+import React,{useEffect} from 'react';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentOptions, DrawerContentScrollView } from '@react-navigation/drawer';
-import { StackNavigator } from './StackNavigator';
-import MisRedes from '../screens/MisRedes';
+
+
 import { Text, useWindowDimensions, View,Image,TouchableOpacity } from 'react-native';
 import { styles } from '../theme/appTheme';
+import { Tabs } from './MenuTabBottom';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
+import Educacion from '../screens/Educacion';
+import Experiencia from '../screens/Experiencia';
+import Habilidades from '../screens/Habilidades';
+import MisRedes from '../screens/MisRedes';
+import Persona from '../screens/Persona';
 
 
 const Drawer = createDrawerNavigator();
 
 export const MenuLateral=()=> {
+
+  
     
      //Configuracion tamaño pantalla
 
@@ -21,13 +31,18 @@ export const MenuLateral=()=> {
      drawerType={width >= 768 ?'permanent':'front'} 
      drawerStyle={{backgroundColor:'#ffd70a'}}
      >
-      <Drawer.Screen name="StackNavigator"   component={StackNavigator} />
+      <Drawer.Screen name="MenuTabBotton"   component={Tabs} />
+      <Drawer.Screen name="Habilidades" component={Habilidades}/>
+      <Drawer.Screen name="Persona" component={Persona}/>
+      <Drawer.Screen name="Experiencia" component={Experiencia}/>
       <Drawer.Screen name="MisRedes"  component={MisRedes} />
     </Drawer.Navigator>
   );
 }
 
 const MenuInterno =({navigation}: DrawerContentComponentProps<DrawerContentOptions>)=>{
+
+  //console.log(navigation.navigate);
 
   return (
     <DrawerContentScrollView>
@@ -43,24 +58,26 @@ const MenuInterno =({navigation}: DrawerContentComponentProps<DrawerContentOptio
 
         {/*Opciones de menu*/}
          <View style={styles.containerMenu}>
- 
-            <TouchableOpacity onPress={()=> navigation.navigate('Habilidades')}>
-              <Text  style={styles.subtitleMenu}>Habilidades</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Habilidades')}>
+              
+              <Text  style={styles.subtitleMenu}><Icon name="star" color="white"size={15} /> Habilidades</Text>
+            </TouchableOpacity>
+           
+            <TouchableOpacity onPress={() => navigation.navigate('Persona')} >
+              <Text style={styles.subtitleMenu}><Icon name="rocket" color="white"size={15} />  Hobbies</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=> navigation.navigate('Persona')} >
-              <Text style={styles.subtitleMenu}>Hobbies</Text>
+            <TouchableOpacity  onPress={() => navigation.navigate('Experiencia')}>
+              <Text style={styles.subtitleMenu}><Icon name="desktop" color="white"size={15} /> Experiencia</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity  onPress={()=> navigation.navigate('Experiencia')}>
-              <Text style={styles.subtitleMenu}>Experiencia</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Educacion')} style={styles.menuBoton}>
+              <Text style={styles.subtitleMenu}><Icon name="book" color="white"size={15} /> Educacion</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=> navigation.navigate('Educacion')} style={styles.menuBoton}>
-              <Text style={styles.subtitleMenu}>Educacion</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('MisRedes')} style={styles.menuBoton}>
+              <Text style={styles.subtitleMenu}><Icon name="logo-facebook" color="white"size={15} /> Mis Redes</Text>
             </TouchableOpacity>
-
-            
          </View>
 
     </DrawerContentScrollView>

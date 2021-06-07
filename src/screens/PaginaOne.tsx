@@ -4,6 +4,9 @@ import { DrawerScreenProps, createDrawerNavigator } from '@react-navigation/draw
 import { Text, View, Button, StyleSheet,TouchableOpacity, useWindowDimensions } from 'react-native';
 import { styles } from '../theme/appTheme';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
+
 /*Stacker Screen 
     interface Props extends StackScreenProps<any,any>{
         id: number;
@@ -34,31 +37,14 @@ export const PaginaOne = ({navigation}:Props) => {
     return (
        
             <View style={styles.globalMargin} >
-                <Text style={styles.title}>Diego Fuentes</Text>
-
+                <Text style={{textAlign:'center',marginVertical:20}}><Icon name="person" color="#ffd70a"size={50} /></Text>
+                <Text style={styles.title}>Diego  Fuentes </Text>
+               
                 <Text style={styles.subtitle}>Sobre Mi</Text>
-
-                <View style={{flexDirection:'row'}}>
-                    <TouchableOpacity
-                        style={styles.buttonPurple}
-                        onPress={()=> navigation.navigate('Persona',{id:1,nombre:"Diego Fuentes" ,hobbie:["Programar","jugar Video Juegos"]})}
-                    >
-                        <Text style={{color:'#fff',fontSize:15,fontWeight:'600'}}>Hobbie</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={styles.buttonPurple}
-                        onPress={()=> navigation.navigate('Persona',{id:2,habilidades:["ES6","React","React Native"]})}
-                    >
-                        <Text style={{color:'#fff',fontSize:15,fontWeight:'600'}}>Habilidades</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={styles.buttonPurple}
-                        onPress={()=> navigation.navigate('MisRedes',{id:2,habilidades:["ES6","React","React Native"]})}
-                    >
-                        <Text style={{color:'#fff',fontSize:15,fontWeight:'600'}}>RRSS</Text>
-                    </TouchableOpacity>
+                <Text style={{textAlign:'center',marginVertical:10}}><Icon name="moon" color="#ffd70a"size={40} /></Text>
+                <View style={{}}>
+                    
+                   
                 </View>
                 
             </View>

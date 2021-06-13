@@ -16,26 +16,16 @@ export const Contacto = () => {
 
     return (
        
-            <View  style={{marginHorizontal:20,marginTop:10}}>
+            <View  style={{marginHorizontal:20,marginTop:50}}>
                 <Text style={{fontSize:40,marginTop:70,fontWeight:'bold',alignItems:'center',textAlign:'center',color:colores.primary}}>Contacto</Text>
 
-                <View style={{alignItems:'center',marginTop:5}}>
-                    <Text style={{marginBottom:10}}><Icon name="call" size={40} color='#ffd70a'/></Text>
+                <View style={{alignItems:'center',marginTop:15}}>
+                    <Text style={{marginBottom:10}}><Icon name="logo-whatsapp" size={40} color='#ffd70a'/></Text>
                     <Text style={{fontSize:30,fontWeight:'bold',color:colores.secondary}}>Telefono</Text>
                     <Text style={{fontSize:20,marginTop:15}}>+569 36386995</Text>
                 </View>
 
-                <View style={{alignItems:'center',marginTop:30}}>
-                    <Text style={{marginBottom:10}}><Icon name="logo-linkedin" size={40} color='#ffd70a'/></Text>
-                    <Text style={{fontSize:30,fontWeight:'bold',color:colores.secondary}}>Linkedin</Text>
-                    <Text style={{fontSize:20,marginTop:15}}>diegoemiliofuentesgomez</Text>
-                </View>
-
-                <View style={{alignItems:'center',marginTop:30}}>
-                     <Text style={{marginBottom:10}} ><Icon name="logo-github" size={40} color='#ffd70a'/></Text> 
-                    <Text style={{fontSize:30,fontWeight:'bold',color:colores.secondary}}>GitHub</Text>
-                    <Text style={{fontSize:20,marginTop:15}}>Difuentes</Text>
-                </View>
+                
 
                 <View style={{alignItems:'center',marginTop:30}}>
                      <Text style={{marginBottom:10}} ><Icon name="mail" size={40} color='#ffd70a'/></Text> 

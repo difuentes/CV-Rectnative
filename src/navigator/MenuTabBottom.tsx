@@ -59,56 +59,53 @@ export const Tabs = () => {
   }
 
 
+    //Botones y configuracion ios 
+    const bottonIos  = createBottomTabNavigator();
 
-
-
-//Botones y configuracion ios 
-const bottonIos  = createBottomTabNavigator();
-
- const  TabsIOS =()=> {
-  return (
-    <bottonIos.Navigator
-        sceneContainerStyle={{
-            backgroundColor:'white'
-        }}
-        tabBarOptions={{
-            activeTintColor:'white',
-            style:{
-                backgroundColor: colores.primary ,
-                borderTopColor: 'black',
-                elevation:0
-            },
-            labelStyle:{
-                fontSize:15,
-                fontWeight:'bold',
-            }
-        }}
-        screenOptions={ ({route})=>({
-            tabBarIcon:({color,focused,size})=>{
-
-                let iconName : string ='';
-                switch(route.name){
-                    case 'Contacto':
-                        iconName='call'
-                    break;
-                    case 'PaginaOne':
-                        iconName='home'
-                    break;
-                    case 'MisRedes':
-                        iconName='chatbubbles'
-                    break;
-                    
+    const  TabsIOS =()=> {
+    return (
+        <bottonIos.Navigator
+            sceneContainerStyle={{
+                backgroundColor:'white'
+            }}
+            tabBarOptions={{
+                activeTintColor:'white',
+                style:{
+                    backgroundColor: colores.primary ,
+                    borderTopColor: 'black',
+                    elevation:0
+                },
+                labelStyle:{
+                    fontSize:15,
+                    fontWeight:'bold',
                 }
+            }}
+            screenOptions={ ({route})=>({
+                tabBarIcon:({color,focused,size})=>{
 
-                return <Icon  name={iconName} size={20} color={color}/>
-            }
-        })}
-     >
-      {/* <Tab.Screen  name="Contacto" options={{title:'Contacto', tabBarIcon:(props) => <Text style={{color:props.color}}>x</Text> }} component={Contacto} />*/}
-      <bottonIos.Screen  name="Contacto" options={{title:'Contacto' }}component={Contacto} />
-      <bottonIos.Screen  name="PaginaOne" options={{title:'Home' }}component={PaginaOne} />
-      <bottonIos.Screen name="MisRedes" options={{title:'Mis Redes '}} component={MisRedes} />
-      
-    </bottonIos.Navigator>
-  );
-}
+                    let iconName : string ='';
+                    switch(route.name){
+                        case 'Contacto':
+                            iconName='call'
+                        break;
+                        case 'PaginaOne':
+                            iconName='home'
+                        break;
+                        case 'MisRedes':
+                            iconName='chatbubbles'
+                        break;
+                        
+                    }
+
+                    return <Icon  name={iconName} size={20} color={color}/>
+                }
+            })}
+        >
+        {/* <Tab.Screen  name="Contacto" options={{title:'Contacto', tabBarIcon:(props) => <Text style={{color:props.color}}>x</Text> }} component={Contacto} />*/}
+        <bottonIos.Screen  name="Contacto" options={{title:'Contacto' }}component={Contacto} />
+        <bottonIos.Screen  name="PaginaOne" options={{title:'Home' }}component={PaginaOne} />
+        <bottonIos.Screen name="MisRedes" options={{title:'Mis Redes '}} component={MisRedes} />
+        
+        </bottonIos.Navigator>
+    );
+    }

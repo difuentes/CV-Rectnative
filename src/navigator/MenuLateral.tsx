@@ -13,6 +13,7 @@ import Experiencia from '../screens/Experiencia';
 import Habilidades from '../screens/Habilidades';
 import MisRedes from '../screens/MisRedes';
 import Persona from '../screens/Persona';
+import PaginaOne from '../screens/PaginaOne';
 
 
 const Drawer = createDrawerNavigator();
@@ -32,10 +33,12 @@ export const MenuLateral=()=> {
      drawerStyle={{backgroundColor:'#ffd70a'}}
      >
       <Drawer.Screen name="MenuTabBotton"   component={Tabs} />
+      <Drawer.Screen name="PaginaOne"   component={PaginaOne} />
       <Drawer.Screen name="Habilidades" component={Habilidades}/>
       <Drawer.Screen name="Persona" component={Persona}/>
       <Drawer.Screen name="Experiencia" component={Experiencia}/>
       <Drawer.Screen name="MisRedes"  component={MisRedes} />
+      <Drawer.Screen name="Educacion" component={Educacion}/>
     </Drawer.Navigator>
   );
 }
@@ -58,6 +61,10 @@ const MenuInterno =({navigation}: DrawerContentComponentProps<DrawerContentOptio
 
         {/*Opciones de menu*/}
          <View style={styles.containerMenu}>
+            <TouchableOpacity onPress={() => navigation.navigate('PaginaOne')}>
+              
+              <Text  style={styles.subtitleMenu}><Icon name="home" color="white"size={15} /> Home</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Habilidades')}>
               
               <Text  style={styles.subtitleMenu}><Icon name="star" color="white"size={15} /> Habilidades</Text>

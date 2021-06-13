@@ -19,11 +19,7 @@ export const Persona = ({ route, navigation }: Props) => {
 
     const params = route.params ;
 
-    useEffect(() => {
-        navigation.setOptions({
-            title: params.hobbie
-        })
-    }, [])
+   
 
 
     return (

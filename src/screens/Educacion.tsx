@@ -7,19 +7,14 @@ export const Educacion = () => {
 
     const navigator = useNavigation(); 
 
-    useEffect(() => {
-        navigator.setOptions({
-            title:"Back To Two",
-            headerBackTitle:'Atras'
-        })
-    }, [])
+   
 
 
     return (
        
             <View  style={styles.globalMargin}>
                 <Text style={styles.title}>Educacion</Text>
-                <Button title="Three" onPress={()=>navigator.navigate('PaginaThree') }/>
+                
             </View>
             
        
